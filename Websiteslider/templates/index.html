@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamscape Stories - Share Your Stories</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>✨</text></svg>"
+    />
+    <meta
+      name="description"
+      content="Share your stories inspired by daily videos and prompts"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-brand">✨ Dreamscape Stories</div>
+      <button class="login-btn">Sign In</button>
+    </nav>
+    <div class="shape" id="movableShape"></div>
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Video Section -->
+      <section class="video-section">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/BfDGrz3SdB0"
+            title="Daily Inspiration"
+            frameborder="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          >
+          </iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-stats">
+            <span class="views">1.2K stories written</span>
+            <span class="dot">•</span>
+            <span class="date">Updated daily at 8:00 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Prompt Section -->
+      <section class="prompt-section">
+        <div class="prompt-card">
+          <h2>Today's Writing Prompt</h2>
+          <p class="prompt-text">
+            "Imagine yourself walking through this rocky planet. How did you get
+            here? What stories would you tell if there was someone here
+            listen?..."
+          </p>
+        </div>
+      </section>
+
+      <!-- Comments Section -->
+      <section class="comments-section">
+        <div class="comments-header">
+          <h2>Stories & Responses</h2>
+          <div class="comments-sort">
+            <button class="sort-button active">Most Liked</button>
+            <button class="sort-button">Newest</button>
+          </div>
+        </div>
+
+        <!-- Comment Input -->
+        <div class="comment-input-container">
+          <div class="user-avatar"></div>
+          <div class="comment-input-wrapper">
+            <textarea
+              class="comment-input"
+              placeholder="Share your story inspired by today's video and prompt..."
+              maxlength="1000"
+            ></textarea>
+            <div class="comment-actions">
+              <span class="character-count">0/1000</span>
+              <button class="submit-comment">Share Story</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments Container -->
+        <div class="comments-container">
+          <!-- Comments will be loaded by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Notifications Container -->
+    <div class="notifications-container"></div>
+
+    <!-- Modal Container (for confirmations) -->
+    <div class="modal-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+    <!-- Notifications Container -->
+    <div class="notifications-container"></div>
+
+    <!-- Modal Container (for confirmations) -->
+    <div class="modal-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
